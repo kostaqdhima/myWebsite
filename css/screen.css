@@ -25,7 +25,8 @@ a.btn:hover { background-color: rgba(0,0,0,.3);}
 /* Header */
 
 header { height: 97px;  
-	     position: relative;}
+	     position: relative;
+		 background-color: #4b0a0c;}
 
 		 
 header a.logo { 
@@ -46,7 +47,7 @@ header a.icon{
 	display:none;
 }
 
-div.slider {height: 450px; background: #cf0004 url(../images/banner_1200.jpg) no-repeat center bottom;}
+div.slider {height: 430px; background: #cf0004 url(../images/banner_1200.jpg) no-repeat center bottom;}
 div div.hero { position: absolute; width:42%; top: 130px; left: 55%;}
 div div.hero h1 { line-height: 1em; margin 0 0 30px 0; color: white;}
 
@@ -125,7 +126,6 @@ section.how-to blockquote p.credit::before {content:'\2014'; position:absolute; 
 /* NAV */
 
 nav {
-	background-color: rgba(0,0,0,.65);
 	position:absolute;
 	top: 0px; left: 0px;
 	padding: 50px 0 0 0;
@@ -142,7 +142,7 @@ nav ul {
 }
 
 nav ul li:hover {background-color: #2b0306;}
-nav div.topnav ul li:hover > ul { display: block;}
+nav ul li:hover > ul { display: block;}
 
 nav ul li a {
 	display: inline-block;
@@ -164,9 +164,9 @@ nav ul ul ul { left: 100%; top: 0px; }
 
 /* Top-Level */
 
-nav div.topnav > ul { padding-left: 200px;}
-nav div.topnav > ul > li {float: left;}
-nav div.topnav > ul > li > a { width: auto; padding: 10px 20px 15px 20px;} 
+nav > ul { padding-left: 200px;}
+nav > ul > li {float: left;}
+nav > ul > li > a { width: auto; padding: 10px 20px 15px 20px;} 
 
 
 nav a[aria-haspopup="true"]::after {
@@ -181,7 +181,7 @@ nav a[aria-haspopup="true"]::after {
 	border-left: 4px solid #fff;
 }
 
-nav div.topnav > ul > li > a[aria-haspopup="true"]::after {
+nav > ul > li > a[aria-haspopup="true"]::after {
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-top: 4px solid #fff;
@@ -251,7 +251,7 @@ footer a:hover {color:#000;}
 	
 	/* Navigton */
 	nav {padding-top: 50px; }
-	nav div.topnav > ul { padding-left: 150px;}	
+	nav > ul { padding-left: 135px;}	
 }
 
 @media screen and (max-width: 625px) {
@@ -261,12 +261,10 @@ footer a:hover {color:#000;}
 	a.btn { font-size: .9em;}
 	
 	/* Header */
-	header { height: 96px;}
+	header { height: 80px;}
 	header a.logo{
-		width: 70%;
-		height: 66px;
+		height: 80px;
 		left: 0px; top: 0px;
-		background-color: rgba(0,0,0,.65);
 		background-size: 112px 46px;
 		background-position: 20px center;
 	}
@@ -275,17 +273,30 @@ footer a:hover {color:#000;}
 	
 	header a.icon{
 		display:block;
-}
+		width: auto;
+		margin: 15px 10px;
+		padding: 10px 15px;
+		text-decoration: none;
+		font-size:20px;
+		color: white;
+		border: 1px solid rgba(255,255,255,.25);
+		}
+
+	header a.icon:hover { background-color: rgba(255,255,255,.2);}
+
 	
-	div.slider { position: relative; height: 260px; background-image: url(../images/banner_625.jpg); background-position: center bottom;}
-	div div.hero {width: 300px; top: 85px; left: 130px;}
+	div.slider { position: relative; height: 160px; background-image: url(../images/banner_625.jpg); background-position: left top;}
+	div div.hero {width: 300px; top: 50px; left: 150px;}
 	div div.hero h1 { margin-bottom: 10px;}
 	
 	
 	/* NAV */
-	nav {display: none;}
-	
-	.responsive {display: block;}
+	nav.topnav {display: none;}
+
+    .topnav.responsive {
+    display: block;
+	}
+
 	
 	/* Section - Main */
 	section.main aside {width: 100%; float:none; text-align: left;}
@@ -328,8 +339,8 @@ footer a:hover {color:#000;}
 	nav ul ul,
 	nav ul ul ul { display: block; position: static;}
 	
-	nav div.topnav > ul { padding: 0;}
-	nav div.topnav > ul > li { float: none; margin-top: 25px;}
+	nav > ul { padding: 0;}
+	nav > ul > li { float: none; margin-top: 25px;}
 	
 	nav ul li:hover { background: none;}
 	
@@ -359,12 +370,18 @@ footer a:hover {color:#000;}
 @media screen and (max-width: 425px) {
 	
 	/* Header */
-	header {height: 150px;}
+	header {height: 60px;}
 	
 	header a.logo {
-		height: 36px; background: rgba(0,0,0,.65) url(../images/logo_small.svg) no-repeat center center;
+		height: 60px; background: url(../images/logo_small.svg) no-repeat center center;
 		background-size: 126px 17px;
 	}
+	
+	header a.icon {
+		margin: 10px 10px;
+		padding: 10px 15px;
+		font-size:15px;
+		}
 	
 	div div.hero { width: 100%; left: 0px; top: 46px; text-align: center;}
 	div div.hero h1 { font-size: 1em; margin-bottom: 10px;}
